@@ -1,4 +1,3 @@
-from unittest import result
 import requests
 from bs4 import BeautifulSoup
 
@@ -7,7 +6,7 @@ soap = BeautifulSoup(peticion.content, 'html.parser')
 
 ol_object = soap.find('ol')
 
-for object in ol_object.findChildren('h3'):
+for object in ol_object.findChildren('li'):
     print(object.strong.contents[0])
 
 # EJEMPLO POO
